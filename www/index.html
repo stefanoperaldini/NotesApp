@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="author" content="Stefano Peraldini">
+    <meta name="description" content="Aplicacion Notes HaB">
+    <title>Notes</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    Ciao
+
+    <header>
+        <h1>Notes App</h1>
+    </header>
+    <main>
+        <section id="contenido">
+            <h2>Introduces tus datos</h2>
+        </section>
+        <form action="login.js" method="POST">
+            <fieldset>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name">
+            </fieldset>
+            <fieldset>
+                <label for="email">Correo electònico</label>
+                <input type="text" name="email" id="email">
+            </fieldset>
+            <fieldset>
+                <label for="pwd1">Contraseña</label>
+                <input type="text" name="pwd1" id="pwd1">
+            </fieldset>
+            <fieldset>
+                <label for="pwd2">Repite contraseña</label>
+                <input type="text" name="pwd2" id="pwd2">
+            </fieldset>
+            <button type="submit" id="registro" class="submit">Registrarse</button>
+        </form>
+        <a href="/acceso.html">Ya tengo una cuenta</a>
+
+    </main>
 </body>
 
 </html>
