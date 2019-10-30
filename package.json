@@ -1,0 +1,24 @@
+{
+  "name": "NotesApp",
+  "version": "1.0.0",
+  "description": "Proyecto aplicación notes HaB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server www --files www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanoperaldini/NotesApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanoperaldini/NotesApp/issues"
+  },
+  "homepage": "https://github.com/stefanoperaldini/NotesApp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
