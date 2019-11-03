@@ -1,8 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,700|Press+Start+2P|Raleway:400,700,800,900&display=swap");
+
+html {
+  --body-bg-color: black;
+  --button-link-color: #c86818;
+  --font-border-color: #f8c51d;
+}
+
 body {
-    background-color: black;
-    color: yellow;
+  background-color: var(--body-bg-color);
+  color: var(--font-border-color);
+  font-family: "Raleway", "Times New Roman", Times;
+  font-weight: 400;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+fieldset {
+  border: none;
 }
 
 .submit {
-    background-color: orange;
+  background-color: var(--button-link-color);
+  color: white;
+  border: none;
+  font-family: "Raleway", "Times New Roman", Times;
+  font-weight: 800;
+}
+
+.linkSign {
+  color: var(--button-link-color);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.6rem;
+}
+
+header h1 {
+  font-family: "Press Start 2P", "Times New Roman", Times;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+body main h2 {
+  font-family: "Oswald", "Times New Roman", Times;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+input {
+  background-color: var(--body-bg-color);
+  border: 1px solid var(--font-border-color);
 }
