@@ -2,26 +2,14 @@
 
 form {
   grid-template-columns: auto 12rem auto;
-  grid-template-rows: repeat(8, 1.5rem) 2rem 2rem;
+  grid-template-rows: 1.5rem 1.5rem 2rem 2rem;
   grid-template-areas:
-    "  .   label_name     .  "
-    "  .   name           .  "
     "  .   label_email    .  "
     "  .   email          .  "
     "  .   label_pwd1     .  "
     "  .   pwd1           .  "
-    "  .   label_pwd2     .  "
-    "  .   pwd2           .  "
     "  .   submit         .  "
     "  .   nav            .  ";
-}
-
-.label_name {
-  grid-area: label_name;
-}
-
-#name {
-  grid-area: name;
 }
 
 .label_pwd1 {
@@ -30,12 +18,4 @@ form {
 
 #pwd1 {
   grid-area: pwd1;
-}
-
-.label_pwd2 {
-  grid-area: label_pwd2;
-}
-
-#pwd2 {
-  grid-area: pwd2;
 }

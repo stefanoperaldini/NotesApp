@@ -7,7 +7,7 @@
     <meta name="author" content="Stefano Peraldini" />
     <meta name="description" content="Aplicacion Notes HaB" />
     <title>Notes</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/acceso.css" />
   </head>
 
   <body>
@@ -17,22 +17,20 @@
     <main>
       <h2 class="upper">Iniciar sesiòn</h2>
       <form action="login.js" method="POST">
-        <fieldset>
-          <label for="email">Correo electrònico</label>
-          <input type="email" name="email" id="email" />
-        </fieldset>
-        <fieldset>
-          <label for="pwd1">Contraseña</label>
-          <input type="password" name="pwd1" id="pwd1" />
-        </fieldset>
+        <label for="email" class="label_email">Correo electrònico</label>
+        <input type="email" name="email" id="email" />
+        <label for="pwd1" class="label_pwd1">Contraseña</label>
+        <input type="password" name="pwd1" id="pwd1" />
         <button type="submit" id="registro" class="submit upper">
           Acceder
         </button>
+        <nav class="nav">
+          <a href="/index.html" class="linkSign upper">Registro |</a>
+          <a href="/password.html" class="linkSign upper"
+            >Recuperaciòn de contrasseña</a
+          >
+        </nav>
       </form>
-      <a href="/index.html" class="linkSign upper">Registro</a>
-      <a href="/password.html" class="linkSign upper"
-        >Recuperaciòn de contrasseña</a
-      >
     </main>
   </body>
 </html>
