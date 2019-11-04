@@ -79,14 +79,6 @@ form {
   justify-self: right;
 }
 
-/* input:invalid {
-  border-color: red;
-}
-
-input:valid {
-  border-color: green;
-} */
-
 @media (min-width: 800px) {
   html {
     font-size: 24px;
