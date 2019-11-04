@@ -16,15 +16,44 @@
     </header>
     <main>
       <h2 class="upper">Introduces tus datos</h2>
-      <form action="login.js" method="POST">
+      <form action="registro.js" method="POST">
         <label for="name" class="label_name">Nombre</label>
-        <input type="text" name="name" id="name" />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          autofocus
+          minlength="3"
+          maxlength="10"
+        />
         <label for="email" class="label_email">Correo electrònico</label>
-        <input type="email" name="email" id="email" />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          minlength="3"
+          maxlength="20"
+        />
         <label for="pwd1" class="label_pwd1">Contraseña</label>
-        <input type="password" name="pwd1" id="pwd1" />
+        <input
+          type="password"
+          name="pwd1"
+          id="pwd1"
+          required
+          minlength="8"
+          maxlength="12"
+        />
         <label for="pwd2" class="label_pwd2">Repite contraseña</label>
-        <input type="password" name="pwd2" id="pwd2" />
+        <input
+          type="password"
+          name="pwd2"
+          id="pwd2"
+          required
+          minlength="8"
+          maxlength="12"
+        />
         <button type="submit" id="registro" class="submit upper">
           Registrarse
         </button>
