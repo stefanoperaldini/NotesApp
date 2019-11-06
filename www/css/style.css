@@ -1,40 +1,8 @@
 @import url(/css/comunes.css);
 
-form {
-  grid-template-rows: repeat(8, 1.5rem) 3rem 3rem;
-  grid-template-areas:
-    "  .   label_name     .  "
-    "  .   name           .  "
-    "  .   label_email    .  "
-    "  .   email          .  "
-    "  .   label_pwd1     .  "
-    "  .   pwd1           .  "
-    "  .   label_pwd2     .  "
-    "  .   pwd2           .  "
-    "  .   submit         .  "
-    "  .   nav            .  ";
-}
-
-.label_name {
-  grid-area: label_name;
-}
-
-#name {
-  grid-area: name;
-}
-
-.label_pwd1 {
-  grid-area: label_pwd1;
-}
-
-#pwd1 {
-  grid-area: pwd1;
-}
-
-.label_pwd2 {
-  grid-area: label_pwd2;
-}
-
-#pwd2 {
-  grid-area: pwd2;
+a {
+  font-family: "Oswald", "Sans-serif";
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--orange);
 }

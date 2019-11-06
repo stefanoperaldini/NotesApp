@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="author" content="Stefano Peraldini" />
     <meta name="description" content="Aplicacion Notes HaB" />
-    <title>Acceso</title>
-    <link rel="stylesheet" href="/css/acceso.css" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/registro.css" />
   </head>
 
   <body>
@@ -18,22 +18,33 @@
         </a>
       </h1>
     </header>
-    <section id="acceso" class="auth">
+    <section id="registro" class="auth">
       <form action="">
-        <h2>Iniciar sesiòn</h2>
-        <fieldset class="ok">
+        <h2>Introduces tus datos</h2>
+        <fieldset>
+          <label for="name" class="label_name">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            autofocus
+            minlength="3"
+            maxlength="10"
+          />
+        </fieldset>
+        <fieldset>
           <label for="email" class="label_email">Correo electrònico</label>
           <input
             type="email"
             name="email"
             id="email"
             required
-            autofocus
             minlength="3"
             maxlength="20"
           />
         </fieldset>
-        <fieldset class="error">
+        <fieldset>
           <label for="pwd1" class="label_pwd1">Contraseña</label>
           <input
             type="password"
@@ -44,12 +55,22 @@
             maxlength="12"
           />
         </fieldset>
+        <fieldset>
+          <label for="pwd2" class="label_pwd2">Repite contraseña</label>
+          <input
+            type="password"
+            name="pwd2"
+            id="pwd2"
+            required
+            minlength="8"
+            maxlength="12"
+          />
+        </fieldset>
         <button type="submit">
-          Acceder
+          Registrarse
         </button>
         <nav class="nav">
-          <a href="/registro.html">Registro |</a>
-          <a href="/password.html">Recuperaciòn de contrasseña</a>
+          <a href="/acceso.html" class="linkSign upper">Ya tengo una cuenta</a>
         </nav>
       </form>
     </section>
