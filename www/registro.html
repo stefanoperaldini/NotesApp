@@ -7,71 +7,41 @@
     <meta name="author" content="Stefano Peraldini" />
     <meta name="description" content="Aplicacion Notes HaB" />
     <title>Registro</title>
-    <link rel="stylesheet" href="/css/registro.css" />
+    <link rel="stylesheet" href="/css/comunes.css" />
   </head>
 
   <body>
     <header>
-      <h1>
-        <a href="/index.html">
-          Notes App
-        </a>
-      </h1>
+      <h1><a href="/index.html">Notes APP</a></h1>
     </header>
+
     <section id="registro" class="auth">
       <form action="">
-        <h2>Introduces tus datos</h2>
+        <h2>Introduce tus datos</h2>
+
         <fieldset>
           <label for="name">Nombre</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            autofocus
-            minlength="3"
-            maxlength="10"
-          />
+          <input type="text" id="name" name="name" />
         </fieldset>
+
         <fieldset>
-          <label for="email">Correo electrònico</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            minlength="3"
-            maxlength="20"
-          />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
         </fieldset>
+
         <fieldset>
-          <label for="pwd1">Contraseña</label>
-          <input
-            type="password"
-            name="pwd1"
-            id="pwd1"
-            required
-            minlength="8"
-            maxlength="12"
-          />
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" />
         </fieldset>
+
         <fieldset>
-          <label for="pwd2">Repite contraseña</label>
-          <input
-            type="password"
-            name="pwd2"
-            id="pwd2"
-            required
-            minlength="8"
-            maxlength="12"
-          />
+          <label for="password2">Repite contraseña</label>
+          <input type="password" id="password2" name="password2" />
         </fieldset>
-        <button type="submit">
-          Registrarse
-        </button>
-        <nav class="nav">
-          <a href="/acceso.html">Ya tengo una cuenta</a>
-        </nav>
+
+        <button>Registrarse</button>
+
+        <nav><a href="/acceso.html">Ya tengo una cuenta</a></nav>
       </form>
     </section>
   </body>

@@ -1,50 +1,50 @@
-import * as crud from "/js/crud.js";
+"use strict";
 
-const elementMain = document.getElementsByTagName("main")[0];
-const elementMenuTag = document.getElementById("menuTag");
-const elementNotasSelected = document.getElementById("notasSelected");
-const elementNota = document.getElementById("nota");
-const elementMenu = document.getElementById("menu");
+const content = document.querySelector("section#content");
+const menu = document.querySelector("button#menu");
+const back = document.querySelector("article#note form button");
+const notes = document.querySelectorAll("section#notes ul li");
 
-const creaArrayElementLi = arrayLi => {
-  return arrayLi.map(element => {
-    const elementLi = document.createElement("li");
-    const elementA = document.createElement("a");
-    elementA.setAttribute("href", "#");
-    elementA.setAttribute("title", `Notas con ${element}`);
-    elementA.textContent = element;
-    elementLi.appendChild(elementA);
-    return elementLi;
-  });
-};
-
-const handleClickMenu = e => {
-  console.log("MENU", elementNotasSelected.classList.contains("hideMenu"));
-  if (
-    !elementNotasSelected.classList.contains("hideMenu") &&
-    !elementNotasSelected.classList.contains("showMenu")
-  ) {
-    elementNotasSelected.classList.add("hideMenu");
-  } else {
-    if (elementNotasSelected.classList.contains("hideMenu")) {
-      elementNotasSelected.classList.replace("hideMenu", "showMenu");
-    } else {
-      elementNotasSelected.classList.replace("showMenu", "hideMenu");
-    }
+function unselectAllNotes() {
+  for (const note of notes) {
+    note.classList.remove("selected");
   }
-};
-
-// MAIN
-const arrayElementLi = creaArrayElementLi(crud.hashTags);
-for (let element of arrayElementLi) {
-  const elementUl = elementMenuTag.getElementsByTagName("ul");
-  elementUl[0].appendChild(element);
 }
 
-const arrayElementsNotas = crud.fetchAll(crud.notesHashTags);
-for (let element of arrayElementsNotas) {
-  const elementUl = elementNotasSelected.getElementsByTagName("ul");
-  elementUl[0].appendChild(element);
+function toggleMenu() {
+  content.classList.toggle("menu-visible");
+  content.classList.remove("note-visible");
+  unselectAllNotes();
 }
 
-elementMenu.addEventListener("click", handleClickMenu);
+function selectNote(e) {
+  //Si está el menú visible oculta el menú en lugar de seleccionar nota
+  if (content.classList.contains("menu-visible")) {
+    //valdría ejecutar toggleMenu()
+    content.classList.remove("menu-visible");
+    return;
+  }
+  // quitar la clase selected de todos los li
+  unselectAllNotes();
+
+  // añadir la clase selected al li que cliqué
+  const li = e.currentTarget;
+  li.classList.add("selected");
+  content.classList.add("note-visible");
+}
+
+function unselectNote(e) {
+  e.preventDefault();
+  unselectAllNotes();
+
+  content.classList.remove("note-visible");
+}
+
+// Event listeners
+menu.addEventListener("click", toggleMenu);
+
+for (const note of notes) {
+  note.addEventListener("click", selectNote);
+}
+
+back.addEventListener("click", unselectNote);
