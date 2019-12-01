@@ -43,7 +43,7 @@ section.auth {
 }
 
 section.auth form {
-  min-width: 20rem;
+  min-width: 16rem;
   max-width: 40rem;
   margin: 0 2rem;
 }
@@ -51,7 +51,7 @@ section.auth form {
 section.auth form h2 {
   font-family: Oswald, sans-serif;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1, 5rem;
   margin-bottom: 1rem;
 }
 

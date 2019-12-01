@@ -1,11 +1,11 @@
 @import url(/css/comunes.css);
-p {
+section#index p {
   margin-bottom: 3rem;
   font-size: 2rem;
   text-align: center;
 }
 
-a {
+section#index a {
   display: block;
   font-family: "Oswald", "Sans-serif";
   font-size: 1rem;
