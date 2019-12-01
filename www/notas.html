@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Stefano Peraldini" />
+    <meta name="description" content="Aplicacion Notes HaB" />
+    <title>Notas</title>
+    <link rel="stylesheet" href="/css/notas.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href="/index.html" class="linkSign">
+          Notes App
+        </a>
+      </h1>
+      <h2>#Tag1</h2>
+      <nav>
+        <button id="menu">
+          <img src="/img/menu.svg" alt="Abrir / cerrar menu" />
+        </button>
+      </nav>
+      <p>Hola, Stefano <a href="/index.html">Salir</a></p>
+    </header>
+    <main>
+      <section id="menuTag">
+        <nav>
+          <ul></ul>
+        </nav>
+      </section>
+      <section id="notasSelected">
+        <header>
+          <form action="">
+            <fieldset>
+              <label for="serach"></label>
+              <input type="text" placeholder="Find..." name="serach " />
+            </fieldset>
+            <a href="#" id="creaNota"
+              ><img src="/img/NewNote.svg" alt="Nueva nota">
+          </form>
+        </header>
+        <nav>
+          <ul></ul>
+        </nav>
+      </section>
+      <section id="nota"></section>
+    </main>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

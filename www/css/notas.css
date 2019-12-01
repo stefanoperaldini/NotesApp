@@ -1,0 +1,167 @@
+@import url(/css/comunes.css);
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header > * {
+  flex-basis: calc(100% / 3);
+}
+
+header h1 {
+  display: none;
+}
+
+header h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Oswald, san-serif;
+}
+
+header nav {
+  order: -1;
+}
+
+header p a {
+  display: block;
+}
+
+header nav button {
+  background: transparent;
+  border: none;
+}
+
+header p {
+  text-align: right;
+  color: var(--red);
+  font-family: Oswald, san-serif;
+  text-transform: uppercase;
+}
+
+main {
+  display: grid;
+  overflow: scroll;
+  grid-template-columns: 60vw 100vw 100vw;
+  grid-template-rows: 1fr;
+  grid-template-areas: "menuTag notasSelected nota";
+}
+
+section#menuTag {
+  grid-area: "menuTag";
+}
+
+section#menuTag nav {
+  background-color: var(--orange);
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.hideMenu {
+  transform: translateX(-160vw);
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  transition-delay: 500ms;
+}
+
+.showMenu {
+  transform: translateX(0);
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  transition-delay: 500ms;
+}
+
+section#notasSelected {
+  border: 1px solid red;
+  grid-area: "notasSelected";
+  background-color: var(--dark);
+  color: var(--bright);
+  padding: 0 1rem;
+  overflow: auto;
+  transform: translateX(-60vw);
+}
+
+section#notasSelected header {
+  display: flex;
+}
+
+section#nota {
+  border: 1px solid red;
+  grid-area: "nota";
+  background-color: var(--dark);
+  color: var(--bright);
+}
+
+section#menuTag nav ul {
+  list-style: none;
+}
+
+section#menuTag nav ul li {
+  margin: 0.5rem 0;
+  padding: 0.25rem 1rem;
+}
+
+section#menuTag nav ul li a {
+  color: var(--dark);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+section#menuTag nav ul li:selected {
+  background-color: var(--dark);
+}
+
+section#menuTag nav ul li:selected a {
+  color: var(--orange);
+}
+
+section#notasSelected form {
+  /* display: flex;
+  align-items: flex-end;
+  justify-content: center; */
+  width: 100%;
+}
+
+section#notasSelected form input {
+  background-color: var(--dark);
+  color: var(--bright);
+}
+
+section#notasSelected nav ul {
+  list-style: none;
+}
+
+section#notasSelected nav ul li {
+  margin-bottom: 1rem;
+}
+
+section#notasSelected nav ul li a {
+  color: var(--orange);
+  text-decoration: none;
+  font-family: "Oswald", "Sans-serif";
+}
+
+section#notasSelected img {
+  height: 2rem;
+  width: 2rem;
+}
+
+#creaNota {
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  heder > * {
+    flex-basis: 50%;
+  }
+
+  header h1 {
+    display: block;
+  }
+  header nav {
+    display: none;
+  }
+  header h1 {
+    display: none;
+  }
+}
